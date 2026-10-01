@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #eef5ff, #ffffff);
+    color: #172554;
+    min-height: 100vh;
+}
+
+
+/* MAIN SECTION */
+
+.pricing-section {
+    min-height: 100vh;
+    padding: 70px 20px;
+}
+
+
+/* HEADING */
+
+.heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.eyebrow {
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.heading h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.heading p:last-child {
+    color: #64748b;
+    font-size: 17px;
+}
+
+
+/* PRICING CONTAINER */
+
+.pricing-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 25px;
+}
+
+
+/* PRICING CARD */
+
+.pricing-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 340px;
+
+    background: #ffffff;
+
+    border: 1px solid #dbeafe;
+    border-radius: 18px;
+
+    padding: 35px 30px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(30, 64, 175, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* CARD HOVER */
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 40px rgba(30, 64, 175, 0.18);
+}
+
+
+/* CARD TITLE */
+
+.pricing-card h2 {
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.description {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 45px;
+}
+
+
+/* PRICE */
+
+.price {
+    margin: 25px 0;
+
+    font-size: 45px;
+    font-weight: bold;
+
+    color: #1d4ed8;
+}
+
+.price span {
+    color: #64748b;
+
+    font-size: 14px;
+    font-weight: normal;
+}
+
+
+/* FEATURES */
+
+.pricing-card ul {
+    list-style: none;
+
+    text-align: left;
+
+    margin: 25px 0;
+}
+
+.pricing-card li {
+    padding: 12px 0;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    color: #475569;
+
+    font-size: 14px;
+}
+
+.pricing-card li::before {
+    content: "✓ ";
+
+    color: #16a34a;
+
+    font-weight: bold;
+}
+
+
+/* BUTTON */
+
+button {
+    width: 100%;
+
+    padding: 14px 20px;
+
+    border: 2px solid #2563eb;
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #2563eb;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+/* BUTTON HOVER */
+
+button:hover {
+    background: #2563eb;
+
+    color: #ffffff;
+
+    transform: scale(1.03);
+}
+
+
+/* POPULAR PLAN */
+
+.popular {
+    border: 3px solid #2563eb;
+
+    transform: scale(1.04);
+
+    box-shadow:
+        0 20px 45px rgba(37, 99, 235, 0.20);
+}
+
+
+/* POPULAR HOVER */
+
+.popular:hover {
+    transform: scale(1.06) translateY(-8px);
+}
+
+
+/* POPULAR BADGE */
+
+.badge {
+    position: absolute;
+
+    top: -15px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    padding: 7px 18px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+}
+
+
+/* POPULAR BUTTON */
+
+.popular button {
+    background: #2563eb;
+
+    color: #ffffff;
+}
+
+.popular button:hover {
+    background: #1d4ed8;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .pricing-container {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .pricing-section {
+        padding: 50px 15px;
+    }
+
+    .heading h1 {
+        font-size: 32px;
+    }
+
+    .heading p:last-child {
+        font-size: 15px;
+    }
+
+    .pricing-container {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .pricing-card {
+        max-width: 400px;
+    }
+
+    .popular {
+        transform: none;
+    }
+
+    .popular:hover {
+        transform: translateY(-8px);
+    }
+
+}
